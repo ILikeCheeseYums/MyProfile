@@ -8,12 +8,12 @@ export default function App(){
 
 function NavBar(){
   return(
-  <nav className="flex justify-between p-5 text-3xl bg-white">
-    <h1>Shwetank's Page</h1>
+  <nav className="flex justify-between p-5 text-3xl align-middle bg-gradient-to-b from-white to-gray-150">
+    <h1 className="p-1">Shwetank's Page</h1>
     <ul className="flex gap-3">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Stuff Ik</a></li>
-      <li><a href="#">Projects</a></li>
+      <li className="border-black border rounded-2xl p-1 hover:bg-lime-400 hover:text-white hover:border-white"><a href="#">About</a></li>
+      <li className="border-black border rounded-2xl p-1 hover:bg-lime-400 hover:text-white hover:border-white"><a href="#">Stack</a></li>
+      <li className="border-black border rounded-2xl p-1 hover:bg-lime-400 hover:text-white hover:border-white"><a href="#">Projects</a></li>
     </ul>
   </nav>)
 }
