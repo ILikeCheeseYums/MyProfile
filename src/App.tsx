@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 export default function App(){
 
   return(
-  <div className="h-screen flex flex-col">
+  <div className="bg-linear-to-b from-[rgb(191,231,255)] to-[rgb(113,177,255)] min-h-screen flex flex-col">
   <NavBar/>
   <AboutMe/>
   </div>)
@@ -30,10 +30,11 @@ function AboutMe() {
   }, [words.length]);
 
   return (
-    <section className="grid bg-white grow m-10 rounded-3xl grid-cols-[1fr_2fr] grid-rows-[auto_1fr] p-5 place-items-center">
-      <div className='col-span-2 p-2 text-4xl'><h1>About? Me?</h1></div>
+    <section className=" bg-white grow m-[1vw]  rounded-3xl flex flex-col items-center">
+      <div className='col-span-2  text-4xl p-6'><h1>About? Me?</h1></div>
+      <div className='grow flex flex-col justify-center items-center p-15 gap-15'>
       <div>
-        <img src={profile} alt="profile" className="rounded-full w-48 h-48 object-cover" />
+        <img src={profile} alt="profile" className="rounded-full min-h-45 min-w-45 object-cover" />
       </div>
       <div>
         <p className="text-gray-800 leading-relaxed">
@@ -47,13 +48,14 @@ function AboutMe() {
           ))}
         </p>
       </div>
+      </div>
     </section>
   );
 }
 
 function NavBar(){
   return(
-  <nav className="flex justify-between p-5 text-3xl align-middle bg-linear-to-b from-white to-gray-150">
+  <nav className="flex items-center p-5 text-3xl flex-col bg-linear-to-b from-white to-gray-150">
     <h1 className="p-1">Shwetank's Page</h1>
     <ul className="flex gap-3">
       <li className="border-black border rounded-2xl p-1 hover:bg-lime-400 hover:text-white hover:border-white"><a href="#">About</a></li>
